@@ -1,14 +1,21 @@
+/* 
+            Array Insertion
+We take an array and insert an element into those array by using traversal and linear method
+
+ */
+
 #include<bits/stdc++.h>
 #define SIZE_MAX 100
 using namespace std;
 void display(int size, int arr[]){
     for (int i = 0; i < size; i++){
         cout<<arr[i]<<" ";
-    }  cout<<endl;
+    }
+    cout<<endl;
 }
 int insertion(int arr[], int size, int capacity,int element, int index){
      if ( size >= capacity) return -1; //if capacity is  less then size it will not work or insert any elements;
-        for (int i = size - 1 ; i >= index; i--){
+    for (int i = size - 1 ; i >= index; i--){
             arr[i + 1] = arr[i];
         }
         arr[index] = element;
