@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void arry (int arr[], int size, int capacity, int index){
+void arr(int arr[], int size, int capacity, int index){
     arr[size];
     
 }
