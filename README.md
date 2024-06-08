@@ -1,2 +1,8 @@
-# DSA-C and CPP
- Data Stracture and Algorithoms in C and C++
+DSA-C and CPP
+----
+Data Stracture and Algorithoms in C and C++
+---
+
+
+
+ #
