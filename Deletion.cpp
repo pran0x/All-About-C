@@ -20,7 +20,7 @@ int main (){ //!-> O(1)
     display(arr,size);
     int dlt_idx_element = 2;
     Deletion(arr, size,dlt_idx_element);
-    size -=1;
+    size--;
     display(arr,size);
     return 0;
 }
