@@ -30,3 +30,4 @@ int main (){
     cout<<"Element found at index : "<<Binary<<"\nElement is : "<<element<<endl;
     return 0;
 }
+//! Time Complicity - > O(n)
