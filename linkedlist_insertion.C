@@ -9,7 +9,7 @@ struct linked{
 int display(struct linked *ptr){ //Pointing an node 
     printf("Previewing Data: \n");
     while( ptr != NULL){
-        printf("Element  is : %d\n");
+        printf("Element Address is : %p  Value is : %d\n",ptr,ptr->data); //Here we show ptr address cz it is the address of current Node;
         ptr = ptr->next;
     }
 }
@@ -31,12 +31,22 @@ int main(){
         second->next = Third;
 
         Third->data = 40;
-        Third->next = Fourth;
+        Third->next = Fourth; // now in third is connect to fourth;
 
         Fourth->data = 50;
         Fourth->next = NULL;
 
 //Preview Data;
+    printf("Before insertion in second and third middle.\n");
+    display(Head);
+
+    //Now Doing Insertion;
+        struct linked *Fifth;
+        Fifth =  (struct linked*)malloc(sizeof(struct linked));
+        second->next = Fifth; // fifth is connect to second's next;
+        Fifth->data = 60;
+        Fifth->next = Third; // now fifth is connected to third;
+        printf("After insertion in second and third middle.\n");
     display(Head);
     return 0;
 }
