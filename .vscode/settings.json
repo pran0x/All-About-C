@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "linkedlist.C": "cpp",
-        "tempCodeRunnerFile.C": "cpp"
+        "tempCodeRunnerFile.C": "cpp",
+        "linkedlist_insertion.C": "cpp"
     }
 }
