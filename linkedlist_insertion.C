@@ -13,6 +13,12 @@ int display(struct linked *ptr){ //Pointing an node
         ptr = ptr->next;
     }
 }
+struct linked *insertion_first(struct linked *head,int data){
+    struct linked *ptr = (struct linked*)malloc(sizeof(struct linked));
+    ptr->next = head; 
+    ptr->data = data;
+    return ptr;
+}
 int main(){
     struct linked *Head;
     struct linked *second;
@@ -40,7 +46,7 @@ int main(){
     printf("Before insertion in second and third middle.\n");
     display(Head);
 
-    //Now Doing Insertion;
+    //!Now Doing Insertion;
         struct linked *Fifth;
         Fifth =  (struct linked*)malloc(sizeof(struct linked));
         second->next = Fifth; // fifth is connect to second's next;
@@ -48,5 +54,10 @@ int main(){
         Fifth->next = Third; // now fifth is connected to third;
         printf("After insertion in second and third middle.\n");
     display(Head);
+
+    ///!INSERTION BY FUNCTION;
+    printf("After Insertion first in the elements by using function: \n");
+        Head = insertion_first(Head,57);
+        display(Head);
     return 0;
 }
