@@ -2,6 +2,8 @@
     "files.associations": {
         "linkedlist.C": "cpp",
         "tempCodeRunnerFile.C": "cpp",
-        "linkedlist_insertion.C": "cpp"
+        "linkedlist_insertion.C": "cpp",
+        "linkedlist_deletion.C": "cpp",
+        "linkedlist_insertion_at_the_mid.C": "cpp"
     }
 }
