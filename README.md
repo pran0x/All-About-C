@@ -1,8 +1,5 @@
-DSA-C and CPP
-----
-Data Stracture and Algorithoms in C and C++
----
+# DSA-C-AND-CPP
 
+---Data Structure and Algorithm's in C and C++
 
-
- #
+---This Course is Followed By Code With harry's DSA lecture;
