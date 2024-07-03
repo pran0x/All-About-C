@@ -16,7 +16,13 @@ struct node* preview(struct node *head){
 struct node* insertion_first(struct node *head, int element){
     struct node *ptr = (struct node*)malloc(sizeof(struct node));
     ptr->data = element;
+    struct node *p = head->next;
+    while ( p->next != head ){
+        p = p->next;
+    }
+    p->next = ptr;
     ptr->next = head;
+    head = ptr;
     return head;
 }
 int main(){
@@ -44,8 +50,8 @@ int main(){
     
     printf("Before adding elements is : \n");
     preview(head);
-    head = insertion_first(head, 10);
     printf("After Adding Elements : \n");
+    head = insertion_first(head, 10);
     preview(head);
     return 0;
 }
