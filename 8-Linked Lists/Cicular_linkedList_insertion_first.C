@@ -52,6 +52,11 @@ int main(){
     preview(head);
     printf("After Adding Elements : \n");
     head = insertion_first(head, 10);
+    head = insertion_first(head, 20);
+    head = insertion_first(head, 30);
+    head = insertion_first(head, 40);
+    head = insertion_first(head, 50);
+    head = insertion_first(head, 60);
     preview(head);
     return 0;
 }
