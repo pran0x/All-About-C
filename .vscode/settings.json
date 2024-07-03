@@ -7,6 +7,8 @@
         "linkedlist_insertion_at_the_mid.C": "cpp",
         "linkedlist_insertion_at_the_end.C": "cpp",
         "linkedlist_deletion_at_value.C": "cpp",
-        "Cicular_linkedList.C": "cpp"
+        "Cicular_linkedList.C": "cpp",
+        "Cicular_linkedList copy.C": "cpp",
+        "Cicular_linkedList_insertion_first.C": "cpp"
     }
 }
