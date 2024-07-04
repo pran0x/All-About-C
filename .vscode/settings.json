@@ -9,6 +9,10 @@
         "linkedlist_deletion_at_value.C": "cpp",
         "Cicular_linkedList.C": "cpp",
         "Cicular_linkedList copy.C": "cpp",
-        "Cicular_linkedList_insertion_first.C": "cpp"
+        "Cicular_linkedList_insertion_first.C": "cpp",
+        "Doubly_linked_list.C": "cpp",
+        "Doubly_linked_list copy.C": "cpp",
+        "Doubly_linked_list_copy.C": "cpp",
+        "Doubly_linked_list_AIO.C": "cpp"
     }
 }
