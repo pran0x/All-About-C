@@ -13,6 +13,7 @@
         "Doubly_linked_list.C": "cpp",
         "Doubly_linked_list copy.C": "cpp",
         "Doubly_linked_list_copy.C": "cpp",
-        "Doubly_linked_list_AIO.C": "cpp"
+        "Doubly_linked_list_AIO.C": "cpp",
+        "stack_in_array.C": "cpp"
     }
 }
