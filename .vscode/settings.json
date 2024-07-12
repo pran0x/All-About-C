@@ -15,6 +15,7 @@
         "Doubly_linked_list_copy.C": "cpp",
         "Doubly_linked_list_AIO.C": "cpp",
         "stack_in_array.C": "cpp",
-        "stack_push_pop.C": "cpp"
+        "stack_push_pop.C": "cpp",
+        "Peek_operation.C": "cpp"
     }
 }
