@@ -1,21 +1,76 @@
 {
-    "files.associations": {
-        "linkedlist.C": "cpp",
-        "tempCodeRunnerFile.C": "cpp",
-        "linkedlist_insertion.C": "cpp",
-        "linkedlist_deletion.C": "cpp",
-        "linkedlist_insertion_at_the_mid.C": "cpp",
-        "linkedlist_insertion_at_the_end.C": "cpp",
-        "linkedlist_deletion_at_value.C": "cpp",
-        "Cicular_linkedList.C": "cpp",
-        "Cicular_linkedList copy.C": "cpp",
-        "Cicular_linkedList_insertion_first.C": "cpp",
-        "Doubly_linked_list.C": "cpp",
-        "Doubly_linked_list copy.C": "cpp",
-        "Doubly_linked_list_copy.C": "cpp",
-        "Doubly_linked_list_AIO.C": "cpp",
-        "stack_in_array.C": "cpp",
-        "stack_push_pop.C": "cpp",
-        "Peek_operation.C": "cpp"
-    }
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "random": "cpp",
+    "cmath": "cpp",
+    "complex": "cpp",
+    "iomanip": "cpp",
+    "chrono": "cpp",
+    "initializer_list": "cpp",
+    "valarray": "cpp",
+    "Stack_in_ll.C": "cpp"
+},
+  "cSpell.words": [
+    "countd",
+    "countm",
+    "Eixo"
+  ],
+  "C_Cpp_Runner.cCompilerPath": "gcc",
+  "C_Cpp_Runner.cppCompilerPath": "g++",
+  "C_Cpp_Runner.debuggerPath": "gdb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/VR_NR/Community/VC/Auxiliary/Build/vcvarsall.bat",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wformat=2",
+    "-Wcast-align",
+    "-Wconversion",
+    "-Wsign-conversion",
+    "-Wnull-dereference"
+  ],
+  "C_Cpp_Runner.msvcWarnings": [
+    "/W4",
+    "/permissive-",
+    "/w14242",
+    "/w14287",
+    "/w14296",
+    "/w14311",
+    "/w14826",
+    "/w44062",
+    "/w44242",
+    "/w14905",
+    "/w14906",
+    "/w14263",
+    "/w44265",
+    "/w14928"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.useUndefinedSanitizer": false,
+  "C_Cpp_Runner.useLeakSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false,
+  "C_Cpp_Runner.useLinkTimeOptimization": false,
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
