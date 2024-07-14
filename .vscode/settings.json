@@ -9,8 +9,10 @@
     "chrono": "cpp",
     "initializer_list": "cpp",
     "valarray": "cpp",
-    "Stack_in_ll.C": "cpp"
-},
+    "Stack_in_ll.C": "cpp",
+    "stack_in_ll_peek.C": "cpp",
+    "stack_ll_peek.C": "cpp"
+  },
   "cSpell.words": [
     "countd",
     "countm",

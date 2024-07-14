@@ -32,12 +32,12 @@ struct node * push(struct node* ptr, int x){
  }
  //popping element from the stack;
  void pop(struct node* ptr){
-    if(isEmpty(top)) printf("Underflow.\n");
+    if(isEmpty(ptr) == true) printf("Underflow.\n");
     else
     {
         struct node* n = ptr; // here, pop out node's next is NULL;
         top = ptr->next; // Now we set top is ptr->next means Null;
-        int x = ptr->data; //save pop out nodes data into another variable;
+        int x = n->data; //save pop out nodes data into another variable;
         printf("%d has been pop out.\n",x); //printing x;
         free(n); // free memory;
     }
