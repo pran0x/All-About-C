@@ -20,6 +20,11 @@ template< class U>  struct X<int, U*, 10>{//define others parameters
         cout<<"This is partial Template #3"<<endl;
     }
 };
+template <class T> struct X<char, T*, 'a'>{
+    void display(){
+        cout<<"This is partial Template #4"<<endl;
+    }
+}
 int main(){
     X<int,  int,    10> a; //same as call function template;
     X<int,  int*,   5>  b; //same as define template;
@@ -30,8 +35,6 @@ int main(){
     b.display();
     c.display();
     d.display();
-
-
 
 return 0;
 }
