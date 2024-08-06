@@ -1,5 +1,5 @@
 # DSA-C-AND-CPP
-
+---About C ,C++ and Raylib and SDL2 lib
 ---Data Structure and Algorithm's in C and C++
 
 ---This Course is Followed By Code With harry's DSA lecture;
