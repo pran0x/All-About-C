@@ -5,7 +5,7 @@
       "version": "0.2.0",
       "configurations": [
         {
-          "name": "Debug",
+          "name": "RayLib Game Run",
           "type": "cppdbg",
           "request": "launch",
           "program": "${workspaceFolder}/${fileBasenameNoExtension}",

@@ -1,27 +1,35 @@
-#include <raylib.h>
-#include "ball.h"
+ #include<raylib.h>
 
-int main()
-{
-    Color darkGreen = Color{20, 160, 133, 255};
 
-    const int screenWidth = 800;
-    const int screenHeight = 600;
-
-    Ball ball = Ball();
-
-    InitWindow(screenWidth, screenHeight, "My first RAYLIB program!");
+ int main(){
+    int ballx = 400;
+    int bally = 400;
+    Color green = {20,160,133,255};
+    InitWindow(800,600,"My First Raylib Game v0.0");
     SetTargetFPS(60);
-
-    while (!WindowShouldClose())
-    {
+    //Gameloop;
+    while(WindowShouldClose() == false){
+        //1.Event handling
+            if(IsKeyDown(KEY_RIGHT)){
+                ballx += 3;
+            }
+            else if(IsKeyDown(KEY_LEFT)){
+                ballx -= 3;
+            }
+            else if(IsKeyDown(KEY_UP)){
+                bally -=3;
+            }
+            else if(IsKeyDown(KEY_DOWN)){
+                bally += 3;
+            }
+        //2.Updating position
+        
+        //3.Drawing. 
         BeginDrawing();
-        ClearBackground(darkGreen);
-        ball.Update();
-        ball.Draw();
+        ClearBackground(green);
+        DrawCircle(ballx,bally,20,WHITE);
         EndDrawing();
     }
-
-    CloseWindow();
+    CloseWindow(); 
     return 0;
-}
+ }
