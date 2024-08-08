@@ -1,4 +1,5 @@
  #include<raylib.h>
+#include<iostream>
  #include "dino.hpp"
  #include "Button.hpp"
 #define width 720
@@ -52,16 +53,28 @@
     // }
     // CloseWindow();
     //!Windows Buttons;
-    InitWindow(800,480,"Game Buttons v1.2");//Main Window;
+    InitWindow(720,400,"Game Buttons v1.2");//Main Window;
     SetTargetFPS(60);//Set maximum Window;
     Texture2D BG = LoadTexture("bin/BG.png");
-    Button startButton{"bin/start.png",{50,100},0.65};
+    Button startButton{"bin/start.png",{50,120},150,50};//path,x,y,w,h;
+    Button ExitButton{"bin/Exit.png",{50,180},150,50};
+    bool Exit = false;//if pressed then exit from the program;
     // LoadRenderTexture
-    while(WindowShouldClose() == false){
+    while(WindowShouldClose() == false && Exit == false){
+        Vector2 mousePosition = GetMousePosition();
+            bool mousePressed = IsMouseButtonPressed(MOUSE_BUTTON_LEFT);
+                if(startButton.isPressed(mousePosition,mousePressed)){
+                    std::cout<<"Start Button Pressed.\n"<<std::endl;
+                }
+                if(ExitButton.isPressed(mousePosition,mousePressed)){
+                    Exit = true;
+                    std::cout<<"Exit Button Pressed.\n"<<std::endl;
+                }
         BeginDrawing();//Starting Texture From Here;
         ClearBackground(BLACK);//Rendering every frame into Black Colour;
         DrawTexture(BG,0,0,WHITE);//Draw this BG texture in here;
         startButton.Draw();
+        ExitButton.Draw();
         EndDrawing();//End Textures;
     }
     CloseWindow();//Window Close;
