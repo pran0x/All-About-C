@@ -22,6 +22,7 @@ void push(struct node* ptr,char val){
     ptr->arr[ptr->top] = val;
     }
     else printf("Stack Full.\n");
+    printf("pushing...\n");
 }
 //Pop out or delete from a stack.
 char pop(struct node* ptr){
@@ -30,30 +31,33 @@ char pop(struct node* ptr){
         ptr->top--;
         return val;
     }
-    else printf("Stack Empty.\n");
+    else{ printf("Stack Empty.\n");
     return -1;
+    }
+    printf("poping...\n");
 }
 
 int parenthesisMatch(char *exp){
     struct node* sp;
     sp->size = 100;
     sp->top = -1;
-    sp->arr = (char *)malloc(sizeof(char));
+    sp->arr = (char *)malloc(sp->size* sizeof(char));
 
     for(int i= 0; exp[i] != '\0'; i++){
-        if(exp[i] == '('){
+        if(exp[i] == '(' ){
             push(sp,'(');
         }
-        else if(exp[i] ==')'){
-            if(isEmpty(sp) != 1);
-            pop(sp);
+        else if(exp[i] ==')' ){
+            if(isEmpty(sp)) return 0;
+            else pop(sp);
         }
     }
-    return 0;
+    if(isEmpty(sp) == 1) return 1;
+    else return 0;
 }
 int main(){
-char *exp = "(8*(9+5)";
-if(parenthesisMatch(exp) == 0 ){
+char *exp = "(8*--$$9))";
+if(parenthesisMatch(exp) == 1){
     printf("Parenthesis Matching.\n");
 }
 
