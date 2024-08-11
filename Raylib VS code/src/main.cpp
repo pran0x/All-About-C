@@ -1,82 +1,65 @@
- #include<raylib.h>
-#include<iostream>
- #include "dino.hpp"
- #include "Button.hpp"
-#define width 720
-#define height 480
+#include<raylib.h>
+#define Width 720
+#define Height 480
+#define BallSpeed 5           //Change The Ball Speed;    //Default 7;
+#define PlayerPaddleSize 50   //Change The paddle Size;  //Default 50;
+#define PlayerPaddleSpeed 8  //Change The paddle Speed;  //Default 8;
+#define AI_Speed 6           //Change The Paddle Speed;  //Default 8;
 
- int main(){
-    //!Simple Game Loop;
-    // int ballx = 400;
-    // int bally = 400;
-    // Color green = {20,160,133,255};
-    // InitWindow(800,600,"My First Raylib Game v0.0");
-    // SetTargetFPS(60);
-    // //Gameloop;
-    // while(WindowShouldClose() == false){
-    //     //1.Event handling
-    //         if(IsKeyDown(KEY_RIGHT)){
-    //             ballx += 3;
-    //         }
-    //         else if(IsKeyDown(KEY_LEFT)){
-    //             ballx -= 3;
-    //         }
-    //         else if(IsKeyDown(KEY_UP)){
-    //             bally -=3;
-    //         }
-    //         else if(IsKeyDown(KEY_DOWN)){
-    //             bally += 3;
-    //         }
-    //     //2.Updating position
-        
-    //     //3.Drawing. 
-    //     BeginDrawing();
-    //     ClearBackground(green);
-    //     DrawCircle(ballx,bally,20,WHITE);
-    //     EndDrawing();
-    // }
-    // CloseWindow(); 
-    //!Game Collision;
-    // InitWindow(width,height,"Game Collision v1.0");
-    // SetTargetFPS(60);
-    // Dino dino;
-    // Rectangle obstacle =  Rectangle{500,100,100,100};//x,y,w,h
-    // while(WindowShouldClose() == false){
-    //     dino.update();
-    //     bool isCollision = CheckCollisionRecs(dino.GetRect(),obstacle);
-    //     BeginDrawing();
-    //     ClearBackground(WHITE);
-    //     DrawRectangleLinesEx(obstacle,5,BLACK);
-    //     dino.Draw();
-    //     dino.DrawHitBox(isCollision);
-    //     EndDrawing();
-    // }
-    // CloseWindow();
-    //!Windows Buttons;
-    InitWindow(720,400,"Game Buttons v1.2");//Main Window;
-    SetTargetFPS(60);//Set maximum Window;
-    Texture2D BG = LoadTexture("bin/BG.png");
-    Button startButton{"bin/start.png",{50,120},150,50};//path,x,y,w,h;
-    Button ExitButton{"bin/Exit.png",{50,180},150,50};
-    bool Exit = false;//if pressed then exit from the program;
-    // LoadRenderTexture
-    while(WindowShouldClose() == false && Exit == false){
-        Vector2 mousePosition = GetMousePosition();
-            bool mousePressed = IsMouseButtonPressed(MOUSE_BUTTON_LEFT);
-                if(startButton.isPressed(mousePosition,mousePressed)){
-                    std::cout<<"Start Button Pressed.\n"<<std::endl;
-                }
-                if(ExitButton.isPressed(mousePosition,mousePressed)){
-                    Exit = true;
-                    std::cout<<"Exit Button Pressed.\n"<<std::endl;
-                }
-        BeginDrawing();//Starting Texture From Here;
-        ClearBackground(BLACK);//Rendering every frame into Black Colour;
-        DrawTexture(BG,0,0,WHITE);//Draw this BG texture in here;
-        startButton.Draw();
-        ExitButton.Draw();
-        EndDrawing();//End Textures;
-    }
-    CloseWindow();//Window Close;
-    return 0;
+#include "pong.hpp"
+int main(){
+  InitWindow(Width,Height,"Pong Game v1.0");
+  SetTargetFPS(60);
+    pong line;
+    //Ball MoveMent;
+    pong ball;
+    ball.x = Width/2;
+    ball.y = Height/2;
+    ball.speed_x = BallSpeed;
+    ball.speed_y = BallSpeed;
+    ball.r = 10;
+     
+    //Paddle MoveMent Player;
+    paddleMovement player;//Right Side;
+    player.width = 10;//paddle width;
+    player.height = PlayerPaddleSize;//paddle height;
+    player.x = Width-20;//x postion;
+    player.y = Height/2 - 30; // y position;
+    player.speed = 8; // paddle movement Speed;
+
+  //Paddle MoveMent AI;
+    CpuPuddle Ai;
+    Ai.width = 10;
+    Ai.height = 50;
+    Ai.x = 10;
+    Ai.y = Height/2 - 20;
+    Ai.speed = AI_Speed;
+
+  while(WindowShouldClose() == false){
+  BeginDrawing();
+  ball.ballMovement();
+  player.update();//player
+  Ai.update(ball.y);//Ai
+
+  //Check Collision;---->Player;
+  if(CheckCollisionCircleRec( Vector2{ball.x, ball.y},ball.r,Rectangle{player.x, player.y, player.width, player.height})){
+    ball.speed_x  = -ball.speed_x; //Reverse the Ball;
+  }
+  //Check Collision;---->AI;
+  if(CheckCollisionCircleRec(Vector2{ball.x,ball.y},ball.r,Rectangle{Ai.x, Ai.y, Ai.width, Ai.height})){
+    ball.speed_x = -ball.speed_x;
+  }
+
+  ball.~pong();
+  ball.BG();
+  line.line();//Middle Line;
+  ball.ball(ball.x, ball.y, ball.r);//Ball postion;
+  player.paddle(player.x, player.y, player.width, player.height);  //paddle player;
+  Ai.paddle(Ai.x, Ai.y, Ai.width, Ai.height);//Paddle Ai;
+  DrawText(TextFormat("AI: %i",ball.AIscore()),Width/2 - 200,10,20,WHITE);///Ai Score Board;
+  DrawText(TextFormat("PLAYER: %i",ball.PLAYERscore()),Width/2 + 120,10,20,WHITE);//Player Score Board;
+  EndDrawing();
+  }
+CloseWindow();
+ return 0;
 }

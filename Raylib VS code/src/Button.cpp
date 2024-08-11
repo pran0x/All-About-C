@@ -1,11 +1,6 @@
 #include "Button.hpp"
 Button::Button(const char *imagepath, Vector2 imageposition,int b_w, int b_h){
- // texture = LoadTexture(imagepath);
  Image image = LoadImage(imagepath);//Image path
- // int originalwidth = image.width;//scale width
- // int originalheight = image.height;//Scale height;
- // int newwidth = static_cast<int>(originalwidth *scale);//scaling optional;
- // int newheight = static_cast<int>(originalheight *scale);//scaling optional;
  ImageResize(&image,b_w, b_h);//new image source and size;
  texture = LoadTextureFromImage(image);//destination;
  UnloadImage(image);//remove from cpu and gpu acceleration.
