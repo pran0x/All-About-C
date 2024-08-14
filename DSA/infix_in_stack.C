@@ -50,20 +50,20 @@ int precedence(char ch){
 }
 
 int isNotOperator(char ch){
-  if(ch == '+' || ch == '*' || ch == '/') return 1;
+  if(ch == '+' || ch == '-'|| ch == '*' || ch == '/') return 1; //Filtering the character 
   else return 0;
 }
 
 char* infixToPostfix(char* infix){
   struct stack *sp = (struct stack*)malloc(sizeof(struct stack));
-  sp->size = 100;
+  sp->size = 50;
   sp->top = -1;
   sp->arr = (char*) malloc(sp->size * sizeof(char));
-  char * Postfix = (char *) malloc(strlen(infix + 1) * sizeof(char));
-  int i = 0;
-  int j = 0;
+  char * Postfix = (char *) malloc((strlen(infix) + 1) * sizeof(char));
+  int i = 0; //Tracking the array of infix;
+  int j = 0;//Tracking the array of postfix;
   while(infix[i] != '\0'){
-    if(!isNotOperator(infix[i])){
+    if(!isNotOperator(infix[i])){  // isNotOperator() != 1
       Postfix[j] = infix[i];
       j++;
       i++;
@@ -79,7 +79,7 @@ char* infixToPostfix(char* infix){
       }
     }
   }
-  while(!isEmpty(sp)){
+  while(!isEmpty(sp)){ // isEmpty() != 1
     Postfix[j] = pop(sp);
     j++;
   }
@@ -87,9 +87,15 @@ char* infixToPostfix(char* infix){
   return Postfix;
 }
 int main(){
-  char *infix = "t/6+c-d+e";
-  printf("InFix: %s\n", infix);
-  printf("PostFix: %s\n",infixToPostfix(infix));
+  //EX:1
+  char *infix1 = "a-b+t/6";
+  printf("Example : 1 \n");
+  printf("InFix: %s\n", infix1);
+  printf("PostFix: %s\n\n",infixToPostfix(infix1));
 
+  char *infix2 = "t/6+c-d+e";
+  printf("Example : 2 \n");
+  printf("InFix: %s\n", infix2);
+  printf("PostFix: %s\n",infixToPostfix(infix2));
 return 0;
 }
