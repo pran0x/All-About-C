@@ -37,7 +37,11 @@ int main(){
   q->arr = (int*)malloc(++q->size * sizeof(int)); // ++q->size is for size+1 (i.e. size = 4, ++q it will be 5)
   //Otherwise size wil be size-1 cause q started from 0 so size stated from 1;
   // printf("%d\n",q->size);
-
+//! ALL THOUGH THIS IS NOT THE OPTIMAL WAY;
+//! HERE THE SOLUTION:
+    //All will be same jut the q.arr will be change;
+    q->arr = new int(q->size * sizeof(int));// c++ way;
+    q->arr = (int*) malloc (q->size * sizeof(int));//C way;
 
   //Enqueue
   Enqueue(q,50);

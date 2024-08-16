@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-
+#include<bits/stdc++.h>
 struct queue{
   int f,size, *arr;
 };
