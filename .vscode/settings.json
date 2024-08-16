@@ -73,8 +73,12 @@
     "thread": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp",
+<<<<<<< HEAD
     "1_Queue_Array.C": "cpp",
     "1_Queue_Array_sizeFixed.C": "cpp"
+=======
+    "1_Queue_Array.C": "cpp"
+>>>>>>> 041f2f05b90ef1eedb9d94e3f8b5325b120d96a4
   },
   "cSpell.words": [
     "countd",
