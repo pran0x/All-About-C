@@ -11,7 +11,6 @@ int IsEmpty(struct Queue *q){
   if(q->r == q->q) return 0;
   return 1;
 }
-<<<<<<< HEAD
 //Array Traversal;
 void TraversalQueue(struct Queue *q){
   printf("Queue list is : ");
@@ -20,8 +19,6 @@ void TraversalQueue(struct Queue *q){
   }
   printf("\n");
 }
-=======
->>>>>>> 041f2f05b90ef1eedb9d94e3f8b5325b120d96a4
 void Enqueue(struct Queue *q, int val){
   if(!IsFull(q)) printf("This Queue is Full.\n");
   else{
