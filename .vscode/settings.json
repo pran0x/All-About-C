@@ -72,7 +72,9 @@
     "streambuf": "cpp",
     "thread": "cpp",
     "typeindex": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "1_Queue_Array.C": "cpp",
+    "1_Queue_Array_sizeFixed.C": "cpp"
   },
   "cSpell.words": [
     "countd",
