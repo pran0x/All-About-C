@@ -1,7 +1,7 @@
 using System;
 
 class HelloWorld{
-  static void Main(string[] args){
-    Console.WriteLine("Hello, World!");
+  static void main(string[] args){
+    Console.WriteLine("Hello, World! Succeed");
   }
 }
