@@ -6,8 +6,8 @@
 
 [C++](./C++)
 
+[C# .NET](https://github.com/pranx2/.NET)
 
-
-[C# .NET]()[Data Structures And Algorithoms](./DSA)
+[Data Structures And Algorithoms](./DSA)
 
 [Raylib Game Libary VS Code Ready](./Raylib_VS_code)
