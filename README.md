@@ -6,9 +6,9 @@
 
 <details> <summary>Topics</summary>
 
-1.[Basic Data Types](./1_Basic)
+1.[Basic Data Types](C/1_Basic)
 
-2.[If Else](./2_if-Else-main)
+2.[If Else](C/2_if-Else-main)
 
 3.[Loops](./3_loops-main)
 
