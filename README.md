@@ -1,6 +1,6 @@
 # All About C
 
-## This repository is Contains :
+## This repository Contains :
 
 [C Programming Language](./C)
 
