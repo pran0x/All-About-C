@@ -6,33 +6,33 @@
 
 <details> <summary>								Topics</summary>
 
--[Basic Data Types](./1_Basic)
+1.[Basic Data Types](./1_Basic)
 
--[If Else](./2_if-Else-main)
+2.[If Else](./2_if-Else-main)
 
--[Loops](./3_loops-main)
+3.[Loops](./3_loops-main)
 
--[Array](./Array-main)
+4.[Array](./Array-main)
 
--[Function](./5_Function-main)
+5.[Function](./5_Function-main)
 
--[Switch](./6_Switch-main)
+6.[Switch](./6_Switch-main)
 
--[Strings](./7_strings-main)
+7.[Strings](./7_strings-main)
 
--[Structure](./8_Structures-main)
+8.[Structure](./8_Structures-main)
 
--[pointers](./9_pointers-main)
+9.[pointers](./9_pointers-main)
 
--[Dynamic Memory](./10_Dynamic-Memory-Allocation-main)
+10.[Dynamic Memory](./10_Dynamic-Memory-Allocation-main)
 
--[File Input Output](./11_File_IO-main)
+11.[File Input Output](./11_File_IO-main)
 
--[Pattern Printing Problem Solves](./12_Pattern-problem)
+12.[Pattern Printing Problem Solves](./12_Pattern-problem)
 
--[Problem Solves](./13_Problem_Solving)
+13.[Problem Solves](./13_Problem_Solving)
 
--[Programming Hero 21-Days BootCamp](./14_bootcamp_Programming_Hero)
+14.[Programming Hero 21-Days BootCamp](./14_bootcamp_Programming_Hero)
 
 </details>
 
