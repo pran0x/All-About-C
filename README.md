@@ -4,7 +4,7 @@
 
 [C Programming Language](./C)
 
-<details> <summary>								Topics</summary>
+<details> <summary>Topics</summary>
 
 1.[Basic Data Types](./1_Basic)
 
