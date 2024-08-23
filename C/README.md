@@ -15,5 +15,5 @@
 - [File Input Output](./11_File_IO-main)
 - [Pattern Printing Problem Solves](./12_Pattern-problem)
 - [Problem Solves](./13_Problem_Solving)
-- [Programming Hero 21-Days BootCamp](./14_bootcamp Programming Hero)
+- [Programming Hero 21-Days BootCamp](./14_bootcamp_Programming_Hero)
 
