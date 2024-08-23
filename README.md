@@ -2,9 +2,7 @@
 
 ## This repository Contains :
 
-[C Programming Language](./C)
-
--<details> <summary>Topics</summary>
+<details> <summary>Topics</summary>[C Programming Language](./C)
 
 -[Basic Data Types](./1_Basic)
 
