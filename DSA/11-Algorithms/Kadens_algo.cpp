@@ -26,6 +26,16 @@ int main(){
       Max_Sum = max(Curr_Sum, Max_Sum);
             cout<<"After Swapping , Max Sum is :  "<<Max_Sum<<endl;
   }
-  cout<<" Max Sum is : "<< Max_Sum<<endl;
+  cout<<" Max Sum is : "<< Max_Sum<<endl<<endl;
+  //!Kadane's Algorithms approach;
+  vector<int> vec = {-2,1,-3,4,-1,2,1,-5,4}; //https://leetcode.com/problems/maximum-subarray/
+  int currsum = 0, maxsum = INT_MIN;
+  for (int itr : vec){
+    currsum += itr;
+    maxsum = max(currsum, maxsum);
+    if ( currsum < 0 ) currsum = 0;
+  }
+  cout<<"vector max sum is : "<<maxsum<<endl;
+  //Time complicity O(n);
 return 0;
 }
