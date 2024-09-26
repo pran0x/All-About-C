@@ -13,5 +13,19 @@ int main(){
     }
     cout<<endl;
   } 
+  cout<<endl<<endl;
+  //!Brute-Force approach;
+  int Max_Sum = INT32_MIN;
+  for( int st = 0; st < size; st++){
+    int Curr_Sum = 0; // sum of sub array elements;
+    for( int en = st; en < size; en++){
+      Curr_Sum += x[en];// addition all the elements of sub-array
+      cout<<"For : "<<st<<" -> "<<Curr_Sum<<endl; // showing sum of first sub-array elements [in order];
+    }
+      cout<<"Max sum is "<<Max_Sum<<" Current Sum is :  "<<Curr_Sum<<endl; // comparing  max sum and current sum;
+      Max_Sum = max(Curr_Sum, Max_Sum);
+            cout<<"After Swapping , Max Sum is :  "<<Max_Sum<<endl;
+  }
+  cout<<" Max Sum is : "<< Max_Sum<<endl;
 return 0;
 }
