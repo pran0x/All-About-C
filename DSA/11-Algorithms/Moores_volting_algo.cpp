@@ -16,4 +16,5 @@ int main(){
   }
   cout<<"pair Sum is : "<<pairsum[0] <<" "<<pairsum[1]; //showing the output;
 return 0;
+//moore's volting algorithm
 }
