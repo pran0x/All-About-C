@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+vector<int> BetterApproach(int arr[],int size,int tar);//function for using better Approach's
 int main(){
 //pain sum; // !Time Complicity : O(n^2)
   vector<int> pairsum;// storing the pairs elements;
@@ -14,7 +15,24 @@ int main(){
       }
     }
   }
-  cout<<"pair Sum is : "<<pairsum[0] <<" "<<pairsum[1]; //showing the output;
+  cout<<"pair Sum is : "<<pairsum[0] <<" "<<pairsum[1]<<endl; //showing the output;
+  vector <int> ouput = BetterApproach(arr,size,tar);
+  cout<<"pair Sum is : "<<ouput[0] <<" "<<ouput[1]<<endl; //showing the output;
+  
 return 0;
-//moore's volting algorithm
+}
+
+vector<int> BetterApproach(int arr[], int size, int tar){ // ! Now the time complicity is O(n)
+  vector<int> vec; // stored pairsum;
+  int i = 0, j = size-1; // pointer  for start and end of array;
+while (i < j){ // run until i == j;
+  int pairSum = arr[i] + arr[j]; // pairsum of i & j;
+  if (pairSum < tar)  i++; // if bigger then increment i;
+  else if ( pairSum > tar)  j--; // if pairsum bigger then target then decrement j;
+  else{//otherwise add them into vector;
+    vec.push_back(arr[i]); 
+    vec.push_back(arr[j]);
+  return vec;
+    }
+  }
 }
