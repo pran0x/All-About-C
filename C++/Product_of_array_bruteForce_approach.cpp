@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+vector<int> optimalWay(vector <int> &nums);
 int main(){
 ////! Code is not optimal, time complicity O(n^2);
 // int nums = 4,arr[nums] = {1,2,3,4};
@@ -31,5 +32,23 @@ for (int i = 0; i < size; i++)
 {
   cout<<prefix[i]*suffix[i]<<"\t"; // output
 }
+//Doing optimal way,time complicity O(n) and space complicity is O(n);
+vector <int> val = optimalWay(nums);
+for(int i : val){
+  cout<<i<<"\t";
+}
 return 0;
+}
+vector<int> optimalWay(vector <int> &nums){
+  int n = nums.size();
+  vector<int> ans(n,1);
+  int suf = 1;
+  for(int i = 1; i < n; i++){
+    ans[i] = ans[i-1] * nums[i-1];
+  }
+  for(int i = n-2; i >= 0; i--){
+    suf *= nums[i+1];
+    ans[i] *= suf;
+  }
+  return ans;
 }
