@@ -2,9 +2,7 @@
 
 ## This repository Contains :
 
-[C Programming Language](./C)
-
-<details> <summary>Topics</summary>
+[C Programming Language](./C)<details> <summary>Topics</summary>
 
 1.[Basic Data Types](C/1_Basic)
 
@@ -40,11 +38,21 @@
 
 [C++](./C++)
 
+
+
+---
+
+
+
 [C# .NET](https://github.com/pranx2/.NET)
 
-[Data Structures And Algorithoms](./DSA)
 
-<details><summary>Topics</summary>
+
+---
+
+
+
+[Data Structures And Algorithoms](./DSA)<details><summary>Topics</summary>
 
 1.[Basics](DSA/1-Chapter-0 (Basics))
 
@@ -68,7 +76,12 @@
 
 11.[Algorithms](DSA/11-Algorithms)
 
-
 </details>
+
+
+
+---
+
+
 
 [Raylib Game Libary VS Code Ready](./Raylib_VS_code)
