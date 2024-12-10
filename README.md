@@ -36,12 +36,39 @@
 
 </details>
 
-
+---
 
 [C++](./C++)
 
 [C# .NET](https://github.com/pranx2/.NET)
 
 [Data Structures And Algorithoms](./DSA)
+
+<details><summery>Topics</summery>
+
+1.[Basics](DSA/1-Chapter-0 (Basics))
+
+2.[Time Complicity](DSA/2-Time Complexity & Big O Notation)
+
+3.[Asymptotic Notations](DSA/3-Asymptotic_Notations)
+
+4.[Best Worst Average](DSA/4-Best_Worst_Average)
+
+5.[ADTs](DSA/5-ADTs)
+
+6.[Array Operations](DSA/6-ArrayOperations)
+
+7.[Linear Vs Binary](DSA/7-LinearVsBinary)
+
+8.[Linked Lists](DSA/8-Linked Lists)
+
+9.[Stack](DSA/9-Stack)
+
+10.[Queue](DSA/10-Queue)
+
+11.[Algorithms](DSA/11-Algorithms)
+
+
+</details>
 
 [Raylib Game Libary VS Code Ready](./Raylib_VS_code)
