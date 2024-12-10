@@ -44,11 +44,11 @@
 
 [Data Structures And Algorithoms](./DSA)
 
-<details><summery>Topics</summery>
+<details><summary>Topics</summary>
 
 1.[Basics](DSA/1-Chapter-0 (Basics))
 
-2.[Time Complicity](DSA/2-Time Complexity & Big O Notation)
+2.[Time Complicity](DSA/2-Time%20Complexity%20&%20Big%20O%20Notation/)
 
 3.[Asymptotic Notations](DSA/3-Asymptotic_Notations)
 
@@ -60,7 +60,7 @@
 
 7.[Linear Vs Binary](DSA/7-LinearVsBinary)
 
-8.[Linked Lists](DSA/8-Linked Lists)
+8.[Linked Lists](DSA/8-Linked%20Lists/)
 
 9.[Stack](DSA/9-Stack)
 
